@@ -32,6 +32,7 @@ https://hemant-cybersec.github.io/Password-Strength-Analyzer/
 Hemant
 ## License
 This project is licensed under the MIT License.
+This project is created for educational purposes.
 
 ## License
 This project is created for educational purpose
