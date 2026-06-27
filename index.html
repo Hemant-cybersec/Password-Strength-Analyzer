@@ -8,6 +8,7 @@
 
     <div class="container">
         <h1>Password Strength Analyzer</h1>
+        <button onclick="toggleTheme()">Dark Mode</button>
 
 <h2>Password Requirements</h2>
 
@@ -21,9 +22,19 @@
 
 <input type="password" id="password" placeholder="Enter Password">
 
-<button onclick="togglePassword()">Show Password</button>
-<button onclick="copy password()">copy password</button>
+<button id="toggleBtn"onclick="togglePassword()">show password</button>
+<button onclick="generatePassword()">Generate Stronge Password</button>
+<button onclick="copy Password()">copy password</button>
 <button onclick="checkPassword()">Analyze Password</button>
+<p id="result"></p>
+
+<p id="score"></p>
+
+<div class="progress">
+    <div id="progress-bar"></div>
+</div>
+
+<div id="recommendations"></div>
 
                 <hr>
 

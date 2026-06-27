@@ -78,14 +78,16 @@ else{
 }
 function togglePassword() {
     let passwordInput = document.getElementById("password");
+    let toggleBtn = document.getElementById("toggleBtn");
 
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
+        toggleBtn.innerHTML = "Hide Password";
     } else {
         passwordInput.type = "password";
+        toggleBtn.innerHTML = "Show Password";
     }
 }
-
 function copyPassword() {
     let passwordInput = document.getElementById("password");
 
@@ -97,4 +99,21 @@ function submitFeedback() {
     alert("Feedback Submitted Successfully!");
     document.getElementById("feedback-message").innerHTML =
     "✅ Thank you for your feedback!";
+}
+function generatePassword() {
+
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+
+    let password = "";
+
+    for (let i = 0; i < 12; i++) {
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    document.getElementById("password").value = password;
+
+    checkPassword();
+}
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
 }
